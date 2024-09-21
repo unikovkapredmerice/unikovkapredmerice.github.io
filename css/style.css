@@ -1,0 +1,90 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: underline; color: inherit
+}
+
+body {
+    display: flex; flex-direction: column;
+    background: #000;
+    color: #FFF;
+    font-family: 'Courier New', monospace;
+}
+body > * {
+    margin: auto;
+    max-width: 650px;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+}
+#banner {
+    position: relative;
+    display: inline-block;
+}
+#banner > h1 {
+    position: absolute;
+    bottom: 0px; left: 20px;
+    margin: 0;
+}
+#banner > img {
+    width: 100%;
+}
+
+#nav_home_trigger {
+    display: none;
+    position: fixed; top: 0;
+    padding: 10px 20px;
+    width: 650px;
+    background-color: #000;
+    text-decoration: none;
+    background-color: #675645;
+}
+
+#nav_menu {
+    display: flex; flex-direction: column;
+    list-style: none; padding: 0; margin: 0;
+    background-color: #675645;
+}
+#nav_menu_trigger {
+    cursor: pointer;
+    padding: 10px 20px;
+}
+.nav_menu_lang, .nav_menu_item {
+    display: none;
+}
+#nav_home_trigger:hover, #nav_menu_trigger:hover, .nav_menu_item:hover, .nav_menu_lang:hover {
+    background: #85776A;
+}
+.nav_home_trigger_visible, .nav_menu_item_visible {
+    display: block;
+}
+.nav_menu_lang > a,
+.nav_menu_item > a {
+    display: flex; justify-content: space-between; align-content: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.nav_menu_lang > a > img {
+    height: 20px;
+}
+section {
+    text-align: justify; text-justify: inter-world;
+    padding: 10px 20px;
+}
+main > section:nth-child(odd) {
+    background: #4d784e;
+}
+
+#gallery_list, #location_list {
+    display: flex; justify-content: space-between; flex-wrap: wrap;
+    list-style: none; padding: 0; margin: 0;
+}
+
+.reservation_times, .prices_in_table {
+    padding-left: 20px;
+}
+
